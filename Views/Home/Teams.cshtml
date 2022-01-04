@@ -1,0 +1,27 @@
+@model List<Team>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>             <!--encabezado-->
+                <tr>            <!-- fila-->
+                    <th scope="col"># Registro</th> <!-- columna-->
+                    <th scope="col">Nombre</th> <!-- columna-->
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var team in Model.ToList())
+                    {
+                        <tr>
+                            <th>@team.Id</th>
+                            <td>@team.Name</td>
+                        </tr>
+                    }
+                }
+                
+                
+            </tbody>
+        </table>
+    </div>
+</div>
